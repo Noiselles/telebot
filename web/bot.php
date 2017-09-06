@@ -6,7 +6,9 @@ $update = json_decode($_POST[Update]);
 
 $chatID = end($updata->result)->message->chat->id;
 
-$url = "https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=$chatID&text=\"Hi! Im Bot\"";
+$test = print_r($update);
+
+$url = "https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=373416942&text=\"$test\"";
 file_get_contents($url);
 
 ?>
