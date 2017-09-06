@@ -2,7 +2,7 @@
 
 $token = "399710240:AAG5WJkoNlgPYL2RPOfZ4BeEmKlvuTimfuU";
 
-$update = json_decode($_POST[Update]);
+$update = $_POST[Update];
 
 $chatID = end($updata->result)->message->chat->id;
 
