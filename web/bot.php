@@ -8,7 +8,7 @@ $chatID = end($updata->result)->message->chat->id;
 
 $test = print_r($update);
 
-$url = "https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=373416942&text=\"$test\"";
+$url = "https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=373416942&text=\"TEST: $test\"";
 file_get_contents($url);
 
 ?>
