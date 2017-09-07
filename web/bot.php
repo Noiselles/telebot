@@ -48,8 +48,9 @@ if(strpos($message,"/lessons -mo -add") !== false)
 {
   try
   {
-    if(file_exists("Monday.txt"))
+    if(!file_exists("Monday.txt"))
     {
+      sendMessage("Isset!",$chatID);
       $file = fopen("Monday.txt","w+");
     }
     $fcont = json_decode(file_get_contents("Monday.txt"));
