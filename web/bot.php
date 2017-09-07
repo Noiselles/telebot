@@ -51,7 +51,7 @@ if(strpos($message,"/lessons -mo -add") !== false)
     if(!file_exists("Monday.txt"))
     {
       $file = fopen("Monday.txt","w+");
-      fwrite($file,json_encode(array("","","","","","","","");));
+      fwrite($file,json_encode(array("","","","","","","","")));
       fclose($file);
     }
     $fcont = json_decode(file_get_contents("Monday.txt"));
