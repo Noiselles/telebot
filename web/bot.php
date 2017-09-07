@@ -62,6 +62,7 @@ if(strcasecmp($message,"/lessons -help") == 0)
 if(strcasecmp($message,"/lessons") == 0)
 {
   $day = date("l");
+  sendMessage("Today is $day",$chatID);
   if(strcasecmp($day,"Monday") == 0)
   {
     ShowLessons("Monday",$chatID);
