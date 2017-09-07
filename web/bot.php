@@ -16,5 +16,9 @@ if(strpos($message,"/start") !== false)
 {
   sendMessage("Hello! \nIm Shkolo_Bot v0.0.4 \n \nEnter /help to view the commands.",$chatID);
 }
+if(strpos($message,"/help") !== false)
+{
+  sendMessage("Shkolo_Bot | Commands: \n",$chatID);
+}
 
 ?>
