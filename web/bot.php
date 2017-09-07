@@ -9,12 +9,12 @@ $chatID = $update[message][chat][id];
 //file_get_contents($url);
 function sendMessage($msg,$CHID)
 {
-  $sendURL = "https://api.telegram.org/bot" . "399710240:AAG5WJkoNlgPYL2RPOfZ4BeEmKlvuTimfuU" . "/sendMessage?chat_id=$CHID&text=$msg&parse_mode=HTML";
+  $sendURL = "https://api.telegram.org/bot" . "399710240:AAG5WJkoNlgPYL2RPOfZ4BeEmKlvuTimfuU" . "/sendMessage?chat_id=$CHID&text=" . urlencode($msg);
   file_get_contents($sendURL);
 }
 if(strpos($message,"/start") !== false)
 {
-  sendMessage("Hello! <br/> :D",$chatID);
+  sendMessage("Hello! \n Im Shkolo_Bot v0.0.4 \n \n Enter /help to view the commands.",$chatID);
 }
 
 ?>
