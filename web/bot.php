@@ -55,9 +55,9 @@ if(strpos($message,"/lessons -mo -add") !== false)
     $fcont = json_decode(file_get_contents("Monday.txt"));
     $text = substr($str, strpos($str, '-add') + 1, strlen($str));
     $fcont[substr($message,-1)] = $text;
-
-  } catch (Exception $e) {
     sendMessage("Success!",$chatID);
+  } catch (Exception $e) {
+    sendMessage("Err!",$chatID);
   }
 }
 if(strpos($message,"/lessons -tu -add") !== false)
