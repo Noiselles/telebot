@@ -8,7 +8,7 @@ $chatID = $updata[message][chat][id];
 
 //$url = "https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=$chatID&text=\"TEST: $message\"";
 //file_get_contents($url);
-public function sendMessage($message,$chatID)
+function sendMessage($message,$chatID)
 {
   $token = "399710240:AAG5WJkoNlgPYL2RPOfZ4BeEmKlvuTimfuU";
   $url = "https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=$chatID&text=$message";
