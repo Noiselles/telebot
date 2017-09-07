@@ -4,7 +4,7 @@ $token = "399710240:AAG5WJkoNlgPYL2RPOfZ4BeEmKlvuTimfuU";
 $content = file_get_contents("php://input");
 $update = json_decode($content, TRUE);
 $message = $update[message][text];
-$chatID = $updata[Message][Chat][id];
+$chatID = $updata[message][chat];
 
 //$url = "https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=373416942&text=\"TEST: $message\"";
 //file_get_contents($url);
@@ -15,6 +15,6 @@ function sendMessage($msg,$CHID)
 }
 if(strpos($message,"/start") !== false)
 {
-  sendMessage("Hello!\r\nIm Shkolo_Bot v0.0.2",$chatID);
+  sendMessage(var_dump($chatID),$chatID);
 }
 ?>
