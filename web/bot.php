@@ -20,31 +20,31 @@ if(strpos($message,"/help") !== false)
 {
   sendMessage("Shkolo_Bot | Commands: \n /lessons -- view homework / timetable",$chatID);
 }
-if($message == "/lessons")
+if(strcasecmp($message,"/lessons") == 0)
 {
   sendMessage("Shkolo_Bot | /lessons commands: \n  -mo Monday\n  -tu Tuesday\n  -we Wednesday\n  -th Thursday\n  -fr Friday",$chatID);
 }
-if($message == "/lessons -mo")
+if(strcasecmp($message,"/lessons -mo") == 0)
 {
   sendMessage("",$chatID);
   break;
 }
-if($message == "/lessons -tu")
+if(strcasecmp($message,"/lessons -tu") == 0)
 {
   sendMessage("",$chatID);
   break;
 }
-if($message == "/lessons -we")
+if(strcasecmp($message,"/lessons -we") == 0)
 {
   sendMessage("",$chatID);
   break;
 }
-if($message == "/lessons -th")
+if(strcasecmp($message,"/lessons -th") == 0)
 {
   sendMessage("",$chatID);
   break;
 }
-if($message == "/lessons -fr")
+if(strcasecmp($message,"/lessons -fr") == 0)
 {
   sendMessage("",$chatID);
   break;
