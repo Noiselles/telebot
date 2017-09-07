@@ -105,7 +105,7 @@ if(strpos($message,"/lessons -mo -add") !== false)
       fclose($file);
     }
     $fcont = json_decode(file_get_contents("Monday.txt"));
-    $text = substr(substr($message, strpos($message, '-add') + 5, strlen($message)),substr($message,-1));
+    $text = substr(substr($message, strpos($message, '-add') + 5, strlen($message)),0,-1);
     $fcont[substr($message,-1)] = $text;
     $file = fopen("Monday.txt","w+");
     fwrite($file,json_encode($fcont));
