@@ -10,7 +10,7 @@ $chatID = $updata[message][chat];
 //file_get_contents($url);
 function sendMessage($msg,$CHID)
 {
-  $sendURL = "https://api.telegram.org/bot" . "399710240:AAG5WJkoNlgPYL2RPOfZ4BeEmKlvuTimfuU" . "/sendMessage?chat_id=$CHID&text=$msg";
+  $sendURL = "https://api.telegram.org/bot" . "399710240:AAG5WJkoNlgPYL2RPOfZ4BeEmKlvuTimfuU" . "/sendMessage?chat_id=373416942&text=$msg";
   file_get_contents($sendURL);
 }
 if(strpos($message,"/start") !== false)
