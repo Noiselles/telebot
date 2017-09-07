@@ -26,23 +26,73 @@ if(strcasecmp($message,"/lessons") == 0)
 }
 if(strcasecmp($message,"/lessons -mo") == 0)
 {
-  sendMessage("",$chatID);
+  $data = json_decode(file_get_contents("Monday.txt"));
+  sendMessage(
+    "Lesson: " . $data[0] . "\n" .
+    "Lesson: " . $data[1] . "\n" .
+    "Lesson: " . $data[2] . "\n" .
+    "Lesson: " . $data[3] . "\n" .
+    "Lesson: " . $data[4] . "\n" .
+    "Lesson: " . $data[5] . "\n" .
+    "Lesson: " . $data[6] . "\n" .
+    "Lesson: " . $data[7] . "\n" ,
+  $chatID);
 }
 if(strcasecmp($message,"/lessons -tu") == 0)
 {
-  sendMessage("",$chatID);
+  $data = json_decode(file_get_contents("Tuesday.txt"));
+  sendMessage(
+    "Lesson: " . $data[0] . "\n" .
+    "Lesson: " . $data[1] . "\n" .
+    "Lesson: " . $data[2] . "\n" .
+    "Lesson: " . $data[3] . "\n" .
+    "Lesson: " . $data[4] . "\n" .
+    "Lesson: " . $data[5] . "\n" .
+    "Lesson: " . $data[6] . "\n" .
+    "Lesson: " . $data[7] . "\n" ,
+  $chatID);
 }
 if(strcasecmp($message,"/lessons -we") == 0)
 {
-  sendMessage("",$chatID);
+  $data = json_decode(file_get_contents("Wednesday.txt"));
+  sendMessage(
+    "Lesson: " . $data[0] . "\n" .
+    "Lesson: " . $data[1] . "\n" .
+    "Lesson: " . $data[2] . "\n" .
+    "Lesson: " . $data[3] . "\n" .
+    "Lesson: " . $data[4] . "\n" .
+    "Lesson: " . $data[5] . "\n" .
+    "Lesson: " . $data[6] . "\n" .
+    "Lesson: " . $data[7] . "\n" ,
+  $chatID);
 }
 if(strcasecmp($message,"/lessons -th") == 0)
 {
-  sendMessage("",$chatID);
+  $data = json_decode(file_get_contents("Thursday.txt"));
+  sendMessage(
+    "Lesson: " . $data[0] . "\n" .
+    "Lesson: " . $data[1] . "\n" .
+    "Lesson: " . $data[2] . "\n" .
+    "Lesson: " . $data[3] . "\n" .
+    "Lesson: " . $data[4] . "\n" .
+    "Lesson: " . $data[5] . "\n" .
+    "Lesson: " . $data[6] . "\n" .
+    "Lesson: " . $data[7] . "\n" ,
+  $chatID);
 }
 if(strcasecmp($message,"/lessons -fr") == 0)
 {
-  sendMessage("",$chatID);
+  $data = json_decode(file_get_contents("Friday.txt"));
+  sendMessage(
+    "Lesson: " . $data[0] . "\n" .
+    "Lesson: " . $data[1] . "\n" .
+    "Lesson: " . $data[2] . "\n" .
+    "Lesson: " . $data[3] . "\n" .
+    "Lesson: " . $data[4] . "\n" .
+    "Lesson: " . $data[5] . "\n" .
+    "Lesson: " . $data[6] . "\n" .
+    "Lesson: " . $data[7] . "\n" ,
+  $chatID);
 }
 if(strpos($message,"/lessons -mo -add") !== false)
 {
