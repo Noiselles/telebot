@@ -64,7 +64,6 @@ if(strpos($message,"/lessons -mo -add") !== false)
   } catch (Exception $e) {
     sendMessage("Success!",$chatID);
   }
-  break;
 }
 if(strpos($message,"/lessons -tu -add") !== false)
 {
