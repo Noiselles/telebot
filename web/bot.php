@@ -87,7 +87,6 @@ if(strcasecmp($message,"/lessons") == 0)
 if(strpos($message,"/lessons -add") !== false)
 {
   $day = date("l");
-  sendMessage("Today is $day",$chatID);
   if(strcasecmp($day,"Monday") == 0)
   {
     AddHomework("Monday",$message,$chatID);
@@ -148,5 +147,41 @@ if(strpos($message,"/lessons -th -add") !== false)
 if(strpos($message,"/lessons -fr -add") !== false)
 {
   AddHomework("Friday",$message,$chatID);
+}
+if(strcasecmp($message,"/time") == 0)
+{
+  $time = date("H:i:s");
+  sendMessage($time,$chatID);
+}
+if(strcasecmp($message,"/time -test") == 0)
+{
+  $time = date("Hi");
+  switch ($time) {
+    case '0915':
+        sendMessage($time - 0915,$chatID);
+      break;
+    case '1005':
+        sendMessage($time - 1005,$chatID);
+      break;
+    case '1100':
+        sendMessage($time - 1100,$chatID);
+      break;
+    case '1150':
+        sendMessage($time - 1150,$chatID);
+      break;
+    case '1255':
+        sendMessage($time - 1255,$chatID);
+      break;
+    case '1345':
+        sendMessage($time - 1345,$chatID);
+      break;
+    case '1435':
+        sendMessage($time - 1435,$chatID);
+      break;
+    default:
+      # code...
+      break;
+  }
+  sendMessage($time,$chatID);
 }
 ?>
