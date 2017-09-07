@@ -156,32 +156,8 @@ if(strcasecmp($message,"/time") == 0)
 if(strcasecmp($message,"/time -test") == 0)
 {
   $time = explode(":",date("H:i"));
-  switch ($time) {
-    case '0915':
-        sendMessage($time - 0915,$chatID);
-      break;
-    case '1005':
-        sendMessage($time - 1005,$chatID);
-      break;
-    case '1100':
-        sendMessage($time - 1100,$chatID);
-      break;
-    case '1150':
-        sendMessage($time - 1150,$chatID);
-      break;
-    case '1255':
-        sendMessage($time - 1255,$chatID);
-      break;
-    case '1345':
-        sendMessage($time - 1345,$chatID);
-      break;
-    case '1435':
-        sendMessage($time - 1435,$chatID);
-      break;
-    default:
-      # code...
-      break;
-  }
+  sendMessage(print_r($time),$chatID);
+    
   sendMessage($time,$chatID);
 }
 ?>
