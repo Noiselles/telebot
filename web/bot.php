@@ -156,8 +156,7 @@ if(strcasecmp($message,"/time") == 0)
 if(strcasecmp($message,"/time -test") == 0)
 {
   $time = explode(":",date("H:i"));
-  sendMessage(print_r($time),$chatID);
-    
-  sendMessage($time,$chatID);
+  sendMessage($time[0],$chatID);
+  sendMessage($time[1],$chatID);
 }
 ?>
