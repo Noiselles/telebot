@@ -50,11 +50,12 @@ if(strpos($message,"/lessons -mo -add") !== false)
   {
     if(!file_exists("Monday.txt"))
     {
-      sendMessage("Isset!",$chatID);
       $file = fopen("Monday.txt","w+");
+      fwrite($file,json_encode(array("","","","","","","","");));
+      fclose($file);
     }
     $fcont = json_decode(file_get_contents("Monday.txt"));
-    $text = substr($str, strpos($str, '-add') + 1, strlen($str));
+    $text = substr($message, strpos($message, '-add') + 1, strlen($message));
     $fcont[substr($message,-1)] = $text;
     sendMessage("Success!",$chatID);
   } catch (Exception $e) {
