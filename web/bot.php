@@ -14,11 +14,11 @@ function sendMessage($msg,$CHID)
 }
 if(strpos($message,"/start") !== false)
 {
-  sendMessage("Hello! \nIm Shkolo_Bot v0.0.4 \n \nEnter /help to view the commands.",$chatID);
+  sendMessage("Hello " . $update[message][from][first_name] . "! \nIm Shkolo_Bot v0.0.4 \n \nEnter /help to view the commands.",$chatID);
 }
 if(strpos($message,"/help") !== false)
 {
-  sendMessage("Shkolo_Bot | Commands: \n",$chatID);
+  sendMessage("Shkolo_Bot | Commands: \n /lessons -- view homework / timetable",$chatID);
 }
 if(strpos($message,"/lessons") !== false)
 {
@@ -44,5 +44,36 @@ if(strpos($message,"/lessons -fr") !== false)
 {
   sendMessage("",$chatID);
 }
+if(strpos($message,"/lessons -mo -add") !== false)
+{
+  try
+  {
+    if(file_exists("Monday.txt"))
+    {
+      $file = fopen("Monday.txt","w+");
+    }
+    $fcont = json_decode(file_get_contents("Monday.txt"));
+    $text = substr($str, strpos($str, '-add') + 1, strlen($str));
+    $fcont[substr($message,-1)] = $text;
 
+  } catch (Exception $e) {
+    sendMessage("Success!",$chatID);
+  }
+}
+if(strpos($message,"/lessons -tu -add") !== false)
+{
+  sendMessage("Success!",$chatID);
+}
+if(strpos($message,"/lessons -we -add") !== false)
+{
+  sendMessage("Success!",$chatID);
+}
+if(strpos($message,"/lessons -th -add") !== false)
+{
+  sendMessage("Success!",$chatID);
+}
+if(strpos($message,"/lessons -fr -add") !== false)
+{
+  sendMessage("Success!",$chatID);
+}
 ?>
