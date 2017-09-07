@@ -20,5 +20,29 @@ if(strpos($message,"/help") !== false)
 {
   sendMessage("Shkolo_Bot | Commands: \n",$chatID);
 }
+if(strpos($message,"/lessons") !== false)
+{
+  sendMessage("Shkolo_Bot | /lessons commands: \n  -mo Monday\n  -tu Tuesday\n  -we Wednesday\n  -th Thursday\n  -fr Friday",$chatID);
+}
+if(strpos($message,"/lessons -mo") !== false)
+{
+  sendMessage("",$chatID);
+}
+if(strpos($message,"/lessons -tu") !== false)
+{
+  sendMessage("",$chatID);
+}
+if(strpos($message,"/lessons -we") !== false)
+{
+  sendMessage("",$chatID);
+}
+if(strpos($message,"/lessons -th") !== false)
+{
+  sendMessage("",$chatID);
+}
+if(strpos($message,"/lessons -fr") !== false)
+{
+  sendMessage("",$chatID);
+}
 
 ?>
