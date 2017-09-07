@@ -14,7 +14,7 @@ function sendMessage($msg,$CHID)
 }
 if(strpos($message,"/start") !== false)
 {
-  sendMessage("Hello! \r\n :D",$chatID);
+  sendMessage("Hello! .chr(10). :D",$chatID);
 }
 
 ?>
