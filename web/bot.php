@@ -10,7 +10,7 @@ $chatID = $updata[message][chat][id];
 //$url = "https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=$chatID&text=\"TEST: $message\"";
 //file_get_contents($url);
 
-if(stristr($message,"/help"))
+if(strpos($message,"/help"))
 {
   sendMessage("Hello!\nIm Shkolo_Bot",$chatID);
 }
