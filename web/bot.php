@@ -155,7 +155,7 @@ if(strcasecmp($message,"/time") == 0)
 }
 if(strcasecmp($message,"/time -test") == 0)
 {
-  $time = date("Hi");
+  $time = explode(":",date("H:i"));
   switch ($time) {
     case '0915':
         sendMessage($time - 0915,$chatID);
