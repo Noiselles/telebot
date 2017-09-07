@@ -84,7 +84,7 @@ if(strcasecmp($message,"/lessons") == 0)
     ShowLessons("Friday",$chatID);
   }
 }
-if(strcasecmp($message,"/lessons -add") == 0)
+if(strpos($message,"/lessons -add") !== false)
 {
   $day = date("l");
   sendMessage("Today is $day",$chatID);
