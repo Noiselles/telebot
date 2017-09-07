@@ -8,11 +8,10 @@ $chatID = $updata[message][chat][id];
 
 //$url = "https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=$chatID&text=\"TEST: $message\"";
 //file_get_contents($url);
-function sendMessage($message,$chatID)
+function sendMessage($msg,$CHID)
 {
-  $token = "399710240:AAG5WJkoNlgPYL2RPOfZ4BeEmKlvuTimfuU";
-  $url = "https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=$chatID&text=$message";
-  file_get_contents($url);
+  $sendURL = "https://api.telegram.org/bot" . "399710240:AAG5WJkoNlgPYL2RPOfZ4BeEmKlvuTimfuU" . "/sendMessage?chat_id=373416942&text=$msg";
+  file_get_contents($sendURL);
 }
 if(strpos($message,"/start") !== false)
 {
