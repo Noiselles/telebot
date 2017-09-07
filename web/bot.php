@@ -77,7 +77,6 @@ if(strcasecmp($message,"/lessons") == 0)
   }
   if(strcasecmp($day,"Thursday") == 0)
   {
-    sendMessage("Work",$chatID);
     ShowLessons("Thursday",$chatID);
   }
   if(strcasecmp($day,"Friday") == 0)
@@ -88,23 +87,24 @@ if(strcasecmp($message,"/lessons") == 0)
 if(strcasecmp($message,"/lessons -add") == 0)
 {
   $day = date("l");
-  if(strpos($day,"Monday") !== false)
+  sendMessage("Today is $day",$chatID);
+  if(strcasecmp($day,"Monday") == 0)
   {
     AddHomework("Monday",$message,$chatID);
   }
-  if(strpos($day,"Tuesday") !== false)
+  if(strcasecmp($day,"Tuesday") == 0)
   {
     AddHomework("Tuesday",$message,$chatID);
   }
-  if(strpos($day,"Wednesday") !== false)
+  if(strcasecmp($day,"Wednesday") == 0)
   {
     AddHomework("Wednesday",$message,$chatID);
   }
-  if(strpos($day,"Thursday") !== false)
+  if(strcasecmp($day,"Thursday") == 0)
   {
     AddHomework("Thursday",$message,$chatID);
   }
-  if(strpos($day,"Friday") !== false)
+  if(strcasecmp($day,"Friday") == 0)
   {
     AddHomework("Friday",$message,$chatID);
   }
