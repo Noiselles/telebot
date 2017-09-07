@@ -77,6 +77,7 @@ if(strcasecmp($message,"/lessons") == 0)
   }
   if(strcasecmp($day,"Thursday") == 0)
   {
+    sendMessage("Work",$chatID)
     ShowLessons("Thursday",$chatID);
   }
   if(strcasecmp($day,"Friday") == 0)
