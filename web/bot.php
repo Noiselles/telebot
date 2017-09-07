@@ -14,7 +14,9 @@ function sendMessage($msg,$CHID)
 }
 function ShowLessons($day,$CHID)
 {
+  sendMessage("1",$chatID);
   $data = json_decode(file_get_contents("$day.txt"));
+  sendMessage("2",$chatID);
   sendMessage(
     "Lesson: " . $data[0] . "\n" .
     "Lesson: " . $data[1] . "\n" .
