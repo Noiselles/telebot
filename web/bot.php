@@ -14,7 +14,7 @@ function sendMessage($msg,$CHID)
 }
 if(strpos($message,"/start") !== false)
 {
-  sendMessage(":D",$chatID);
+  sendMessage("Hello! \r\n Im Shkolo_Bot v0.0.3",$chatID);
 }
 
 ?>
