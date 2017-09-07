@@ -23,26 +23,32 @@ if(strpos($message,"/help") !== false)
 if(strpos($message,"/lessons") !== false)
 {
   sendMessage("Shkolo_Bot | /lessons commands: \n  -mo Monday\n  -tu Tuesday\n  -we Wednesday\n  -th Thursday\n  -fr Friday",$chatID);
+  break;
 }
 if(strpos($message,"/lessons -mo") !== false)
 {
   sendMessage("",$chatID);
+  break;
 }
 if(strpos($message,"/lessons -tu") !== false)
 {
   sendMessage("",$chatID);
+  break;
 }
 if(strpos($message,"/lessons -we") !== false)
 {
   sendMessage("",$chatID);
+  break;
 }
 if(strpos($message,"/lessons -th") !== false)
 {
   sendMessage("",$chatID);
+  break;
 }
 if(strpos($message,"/lessons -fr") !== false)
 {
   sendMessage("",$chatID);
+  break;
 }
 if(strpos($message,"/lessons -mo -add") !== false)
 {
@@ -59,6 +65,7 @@ if(strpos($message,"/lessons -mo -add") !== false)
   } catch (Exception $e) {
     sendMessage("Success!",$chatID);
   }
+  break;
 }
 if(strpos($message,"/lessons -tu -add") !== false)
 {
